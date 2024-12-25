@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+<div id="view1">
+    <div class="middle">
+        <p>
+            We only <span class="text-highlight">
+                teach
+            </span> 
+            <br>
+            what we are really <br>
+            really <span class="italic">good</span> at. <br>
+        </p>
+        <a href="{% url 'app:courses' %}" id="button">
+            Check Courses-Make an Impact
+        </a>
+        <div class="side-text" >
+            Get ready to accelerate your career
+            with customized courses and leave
+            your mark in the tech industry
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="mileStones">
+            <div class="mileStone">
+                <div class="text">
+                    <h2>25k+</h2>
+                    <p>Students taught</p>
+                </div>
+            </div>
+            <div class="mileStone">
+                <div class="text">
+                    <h2>20+</h2>
+                    <p>Instructors</p>
+                </div>
+            </div>
+            <div class="mileStone">
+                <div class="text">
+                    <h2>431K+</h2>
+                    <p>Youtube Subs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="view2">
+    <div class="top">
+        We do whatever it takes to help you <br>understand the concepts.
+    </div>
+    <div class="middle">
+        <iframe frameborder="0" src="https://www.youtube.com/embed/60SRAWmMXyc"></iframe>
+    </div>
+    <div class="bottom">
+        <a href="https://www.youtube.com/@thesheryianscodingschool" target="_blank" id="button">
+            Explore free learning
+        </a>
+    </div>
+</div>
+<div id="view3">
+    <p>Courses Offered.</p>
+    <div id="courses">
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/webdevelopment.jpg'%}" alt="">
+                <p>Web Development</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/java.jpg'%}" alt="">
+                <p>Java Programming</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/python.jpg'%}" alt="">
+                <p>Python Programming</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/django.jpg'%}" alt="">
+                <p>Django Framework</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/devops.jpg'%}" alt="">
+                <p>DevOps</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+        <div class="course">
+            <a href="" id="image_link">
+                <img src="{% static 'images/uiux.jpg'%}" alt="">
+                <p>Ui/Ux Design</p>
+            </a>
+            <a href="" id="link">View Details</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sample.css">
+    <script src="./home.js"></script>
+</head>
+<body>
+    <div id="first">
+        <nav id="navbar">
+            <ul>
+                <li><div id="logo"></div><button text="button" id="firstElement" onclick="sheryiansClick()">Sheryians coding school</button></li>
+                <li><button class="element" id="element1">Home</button></li>
+                <li><button class="element" id="element2">Courses</button></li>
+                <li><button class="element" id="element3">Bootcamp(Kodr)</button></li>
+                <li><button class="element" id="element4">Request Callback</button></li>
+            </ul>
+        <button text="button" id="active">Sign In</button>
+        </nav>
+    <div>
+    <pre id="para1">   We only <span id="teach">teach</span>
+what we are really   
+   really <span id="good">good</span> at.</pre>
+    <button text="button" id="button_check">Check Courses-Make an Impact</button>
+    <pre id="para2">Get ready to <span id="accelerate">accelerate your 
+career </span>with customized courses 
+and leave your mark in the tech 
+industry</pre>
+    </div>
+    <div id="third_part">
+        <span id="one">
+            <h2><pre class="first_number">     25k+</pre></h2>
+            <pre id="first_text">Students taught               </pre>
+        </span>
+        <span id="two">
+            <h2><pre class="first_number">    20+</pre></h2>  
+            <pre id="first_text">Instructors               </pre>
+        </span>
+        <span id="three">
+            <h2><pre class="first_number">    431K+</pre></h2>
+            <pre id="first_text">Youtube Subs.</pre>
+        </span>
+    </div>
+</div>
+    <div id="second">
+        <div id="text_second">
+            <pre id="whatever">    we do whatever it takes to help you 
+     <span id="understand">   understand the concepts.</span></pre></div>
+     <div id="video_second">
+     <iframe id=video1 src="https://youtube.com/embed/60SRAWmMXyc"></iframe></div>
+     <div id="explore_second">
+     <button text="button" id="button_explore">Explore free learning</button>
+        </div>
+    </div>
+    <div id="third">
+        <div id="third_first">Courses Offered.</div><br>
+        <div id="third_second">
+            <div class="courses" id="one_course"><button text="button" id="front_end"><img class="image_container" src="../assets/Images/FrontEnd.webp"><pre><h2 class="third_second_text">Front-End Domination:
+Create Anything with Code</h2></pre><button text="button" class="hindi">HINDI</button><a class="discount">Limited Time Discount</a><a class="price">₹ 4999</a><a class="drop_price">₹ 9999</a><button id="front_offer">50% OFF</button><button text="button" class="view_button">View Details</button></div>
+            <div class="courses" id="two_course"><button text="button" id="back_end"><img class="image_container" src="../assets/Images/backEnd.webp"><pre><h2 class="third_second_text">Back-End Domination:
+Create Efficient Back-End.</h2></pre><button text="button" class="hindi">HINDI</button><a class="discount">Limited Time Discount</a><a class="price">₹ 5999</a><a class="drop_price">₹ 11999</a><button class="offer">50% OFF</button><button text="button" class="view_button">View Details</button></div>
+            <div class="courses" id="three_course"><button text="button" id="apti_reasoning"><img class="image_container" src="../assets/Images/aptiReasoning.webp"><pre><h2 class="third_second_text">Aptitude & Reasoning for 
+Campus Placements</h2></pre><button text="button" class="hinglish">HINGLISH</button><a class="discount">Black Friday Sale</a><a class="price">₹ 999</a><a id="third_drop_price">₹ 1500</a><button class="offer">33% OFF</button><button text="button" class="view_button">View Details</button></div>
+            <div class="courses" id="four_course"><button text="button" id="java_dsa"><img class="image_container" src="../assets/Images/javaDSA.webp"><pre><h2 class="third_second_text">Java & DSA Domination</h2></pre><button text="button" class="hinglish" id="single_lang">HINGLISH</button><a class="discount">Limited Time Discount</a><a class="price">₹ 4999</a><a class="drop_price">₹ 9999</a><button class="offer">50% OFF</button><button text="button" class="view_button">View Details</button></div>
+            <div class="courses" id="five_course"><button text="button" id="three_js"><img class="image_container" src="../assets/Images/threeJS.webp"><pre><h2 class="third_second_text">Three.js Domination</h2></pre><button text="button" class="hindi" id="single_lang">HINDI</button><a class="discount">Black Friday Sale</a><a class="price">₹ 2499</a><a class="drop_price" >₹ 3500</a><button class="offer">29% OFF</button><button text="button" class="view_button">View Details</button></div>
+        </div>
+    </div>
+    <div id="four">
+        <div id="four_first">
+            <pre id="four_text">Top <span id="companies">companies</span> our students 
+           working with</pre>
+        </div>
+    </div>
+</body>
+</html> -->
